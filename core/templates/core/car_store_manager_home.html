@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storekeeper - Car Import Management System</title>
+    <link rel="stylesheet" href="{% static 'core/storekeeper.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Cars</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="{% url 'SIEMS_home' %}">Log out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="storekeeper-dashboard">
+        <h1>Storekeeper Dashboard</h1>
+        <div class="dashboard">
+            <div class="dashboard-item">
+                <h2>Confirm Sell Orders</h2>
+                <ul id="order-list">
+                    <li>
+                    {% for order in sell_orders %}
+                        <form method="POST" action="{% url 'sell_store' %}">
+                        {% csrf_token %}
+                        <label for="order"><strong>Order No: </strong></label>
+                        <input id= "order" name="order" value="{{ order.OrderNo.OrderNo }}" readonly><br><br>
+                        <label for="model"><strong>Model: </strong></label>
+                        <input id="model" name="model" value="{{ order.Model.Model }}" readonly><br>
+                        <p><strong>Customer Name: </strong>{{ order.OrderNo.Name }}</p>
+                        <p><strong>Email: </strong>{{ order.OrderNo.Email }}</p>
+                        <p><strong>PhoneNumber: </strong>{{ order.OrderNo.PhoneNumber}}</p>
+                        <p><strong>Address: </strong>{{ order.OrderNo.Location }}</p>
+                        <p><strong>Specifications: </strong>{{ order.Model.Specifications }}</p>
+                        <p><strong>Color: </strong>{{ order.OrderNo.Color}}</p>
+                        <p><strong>Year: </strong>{{ order.Model.Year }}</p>
+                        <p><strong>Price: </strong>{{ order.Model.Price }}</p>
+                        <p><strong>Supplier: </strong>{{ order.Model.supplier.supp_name}}</p>
+                        <p><strong>Delivery Date:</strong> {{ order.OrderNo.Date }}</p>
+                        <button type="submit">Confirm</a>
+                        </form>
+                    {% empty %}
+                        <li>No orders found.</li>
+                    {% endfor %}
+                    </li>
+                </ul>
+            </div>
+
+            <div class="dashboard-item">
+                <h2>Confirm Import Orders</h2>
+                <ul id="order-list">
+                    {% for order in imp_orders %}
+                    <li>
+                        <form method="POST" action="{% url 'imp_store' %}">
+                        {% csrf_token %}
+                        
+                            <label for="track"><strong>TrackingNo: </strong></label>
+                            <input id="track" name="track" value="{{ order.TrackingNo.TrackingNo }}" readonly><br>
+                            <br>
+                            <label for="model"><strong>Model</strong> </label>
+                            <input id="model" name="model" value="{{ order.Model.Model }}" readonly><br>
+                            <p><strong>Specifications: </strong>{{ order.TrackingNo.Model.Specifications }}</p>
+                            <p><strong>Year: </strong>{{ order.TrackingNo.Model.Year }}</p>
+                            <p><strong>Price: </strong>{{ order.TrackingNo.Model.Price }}</p>
+                            <p><strong>Supplier: </strong>{{ order.TrackingNo.Model.supplier.supp_name}}</p>
+                            <p><strong>Count: </strong>{{ order.TrackingNo.Count }}</p>
+                            <button type="submit">Confirm</a>
+                            </form>
+                    </li>
+                        
+                    {% empty %}
+                        <li>No orders found.</li>
+                    {% endfor %}
+                </ul>
+            </div> 
+
+            <div class="dashboard-item">
+                <h2>Inventory</h2>
+                <ul id="inventory-list">
+                    {% for order in inv_table %}
+                    <li>
+                        <form method="POST" action="{% url 'get_order' %}">
+                            {% csrf_token %}
+                            
+                            <label for="model"><strong>Model: </strong></label>
+                            <input id="model" name="model" value="{{ order.Model.Model }}" readonly><br>
+                            <p><strong>Specifications: </strong>{{ order.Model.Specifications }}</p>
+                            <p><strong>Year: </strong>{{ order.Model.Year }}</p>
+                            <p><strong>Price: </strong>{{ order.Model.Price }}</p>
+                            <p><strong>Supplier: </strong>{{ order.Model.supplier.supp_name}}</p>
+                            <p><strong>Color: </strong>{{ order.Color }}</p>
+                            <p><strong>Count: </strong>{{ order.Count }}</p>
+                            </form>
+                    </li>
+                    {% empty %}
+                    <li>No orders found.</li>
+                    {% endfor %}
+
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Simple Import Export Management System. All rights reserved.</p>
+    </footer>
+
+    
+</body>
+</html>

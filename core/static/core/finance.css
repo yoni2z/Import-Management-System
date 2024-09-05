@@ -1,0 +1,161 @@
+/* Reset some basic elements */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* heading styling */
+header {
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    color: gold;
+    top: 0;
+    left: 0;
+}
+
+nav {
+    background-color: black;
+    color: gold;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display:flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: gold;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+/* About Us Section Styles */
+.about-us {
+    padding: 50px 200px;
+    text-align: center;
+    background-color: white;
+}
+
+.about-us h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.Import-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.Import-content li {
+    display: block;
+    justify-content: space-between;
+    padding: 15px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.Import-content li strong {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.Import-content li a {
+    margin: 100px;
+    padding: 0 auto;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007BFF;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.Import-content li a:hover {
+    background-color: #0056b3;
+}
+
+@media (min-width: 600px) {
+    .Import-content li {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .Import-content li a {
+        margin-top: 0;
+        margin-left: auto;
+    }
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-button {
+    flex: 2;
+}
+
+.about-button a {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: black;
+    color: gold;
+    border: 1px solid gold;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.about-button a:hover {
+    text-decoration:underline;
+    background-color: gold;
+    color: black;
+    border: 1px solid black;
+}
+footer {
+    background-color: black;
+    color: gold;
+    text-align: center;
+    padding: 5px 0;
+    position:fixed;
+    width: 100%;
+    bottom: 0;
+}

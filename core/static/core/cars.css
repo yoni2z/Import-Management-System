@@ -1,0 +1,110 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* heading styling */
+header {
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    color: gold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: gold;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+/* Section Styling */
+.available-cars {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.available-cars h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.car-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.car-item {
+    background-color: black;
+    color: gold;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    text-align: left;
+}
+
+.car-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.car-item h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.car-item p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.order-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.order-button:hover {
+    background-color: gold;
+}
+
+/* Footer Styles */
+footer {
+    background-color: black;
+    color: gold;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

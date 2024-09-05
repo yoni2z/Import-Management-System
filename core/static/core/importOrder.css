@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* heading styling */
+header {
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    color: gold;
+    top: 0;
+    left: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: gold;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.import-order {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: black;
+    color: gold;
+    border: 1px solid gold;
+    border-radius: 10px;
+}
+
+.import-order h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#importOrderForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#importOrderForm label {
+    margin-bottom: 5px;
+}
+
+#importOrderForm input,select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid gold;
+    border-radius: 5px;
+}
+
+#importOrderForm button {
+    padding: 10px;
+    background-color: gold;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background-color 0.3s;
+}
+
+#importOrderForm button:hover {
+    background-color: white;
+    color: gold;
+}
+
+footer {
+    background-color: black;
+    color: gold;
+    text-align: center;
+    padding: 1px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Simple Import Export</title>
+     
+    <link rel="stylesheet" href="{% static 'core/contact.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'SIEMS_home' %}">Home</a></li>
+                <li><a href="{% url 'SIEMS_about' %}">About Us</a></li>
+                <li><a href="{% url 'SIEMS_cars' %}">Cars</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-us">
+        <div class="container">
+            <div class="contact-info">
+                <h1>Contact Information</h1>
+                <p><strong>Address:</strong> 5kilo Addis Ababa Institute of Technology, Addis Ababa, Ethiopia</p>
+                <p><strong>Phone:</strong> +251 115 26 3235</p>
+                <p><strong>Email:</strong> sims.addisababa@org.com</p>
+                <p><strong>Business Hours:</strong> Mon-Fri 9:00 AM - 6:00 PM</p>
+                
+                <div class="location-map">
+                    <h2>Our Location</h2>
+                    <a href="https://maps.app.goo.gl/DdyYpzFTdXhW5JkU7">
+                        <img src="{% static 'core/images/location.jpg' %}" alt="Location Map">
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Contact Us</h2>
+                <form id="contactForm" action="https://formspree.io/f/mzzppbba" method="post">
+                    {% csrf_token %}
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="social-media">
+            <h2>Follow Us</h2>
+            <ul>
+                <li><a href="https://www.facebook.com/people/Addis-Ababa-University/100064311447035/"><img src="{% static 'core/images/facebook.jpg' %}" alt="Facebook"></a></li>
+                <li><a href="https://x.com/AddisAbabaUniv"><img src="{% static 'core/images/twitter.jpg' %}" alt="Twitter"></a></li>
+                <li><a href="https://www.linkedin.com/school/addis-ababa-university/?originalSubdomain=et"><img src="{% static 'core/images/linkedin.jpg' %}" alt="LinkedIn"></a></li>
+                <li><a href="https://www.instagram.com/universityaddisababa/"><img src="{% static 'core/images/instagram.jpg' %}" alt="Instagram"></a></li>
+                <li><a href="https://www.youtube.com/@AddisAbabaUniversity-AAU/featured"><img src="{% static 'core/images/youtube.jpg' %}" alt="Youtube"></a></li>
+                <li><a href="https://www.tiktok.com/@aauniversity/video/7340693719747808517"><img src="{% static 'core/images/tiktok.jpg' %}" alt="Tiktok"></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Simple Import Export Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Simple Import Export</title>
+    
+    <link rel="stylesheet" href="{% static 'core/about.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'SIEMS_home' %}">Home</a></li>
+                <li><a href="{% url 'SIEMS_about' %}">About Us</a></li>
+                <li><a href="{% url 'SIEMS_cars' %}">Cars</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about-us">
+        <h1>About Us</h1>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="{% static 'core/images/aboutUs.jpg' %}" alt = "About us">
+            </div>
+            <div class="about-text">
+                <h2>Our Story</h2>
+                <p>Welcome to our Import Export Management System. We specialize in helping customers import vehicles from around the world and export coffees to any part of the world. Our platform is designed to make the import and export process easy and hassle-free.</p>
+                <h2>Our Mission</h2>
+                <p>Our mission is to provide marvellous service and support to our clients, ensuring they receive their vehicles as well as they successfully sent their coffee in the best condition and within the shortest possible time.</p>
+                <h2>Our Team</h2>
+                <p>We have a dedicated team of professionals with extensive experience in the automotive and import industries for the import process. Also we have an experianced team of professionals withe extensive experiance in the coffee industries for the export process. Our team works tirelessly to meet and exceed our clients' expectations.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Car Import Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

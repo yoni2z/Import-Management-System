@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipment Details - Car Import Management System</title>
+    <link rel="stylesheet" href="{% static 'core/shipments.css' %}">
+    <script src="{% static 'core/js/shipment.js' %}" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Simple Import Management System</a></li>
+                <li><a href="{% url 'SIEMS_home' %}">Log out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="shipment-details">
+        <h1>Shipment Details</h1>
+        <div class="shipment-info" id="shipmentInfo">
+            <!-- Dynamic content will be injected here -->
+        </div>
+    </section>
+
+    <section class="all-shipments">
+        <h2>All Shipments</h2>
+        <div class="shipment-list" id="shipmentList">
+            <!-- Dynamic content will be injected here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Car Import Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

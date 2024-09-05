@@ -1,0 +1,55 @@
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="{% static 'core/home.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'SIEMS_home' %}">Home</a></li>
+                <li><a href="{% url 'SIEMS_about' %}">About Us</a></li>
+                <li><a href="{% url 'SIEMS_cars' %}">Cars</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'admin:login' %}">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="login-form">
+        <div class="loginContainer">
+            <div class="loginHeader">
+                <h1>SIMS</h1>
+                <h2>Simple Import Management System</h2>
+            </div>
+            <form method="post" action="{% url 'SIEMS_home' %}" class="loginForm">
+                {% csrf_token %}
+                <div class="formGroup">
+                    <label for="username">Employee ID:</label>
+                    <input type="text" placeholder="EMP000" id="username" name="username" required>
+                </div>
+                <div class="formGroup">
+                    <label for="password">Password:</label>
+                    <input type="password" placeholder="12345678" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            {% if form.errors %}
+            <div class="error">
+                {% for field in form %}
+                    {% for error in field.errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                {% endfor %}
+                {% for error in form.non_field_errors %}
+                    <p>{{ error }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </section>
+</body>
+</html>

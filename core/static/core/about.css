@@ -1,0 +1,100 @@
+/* Reset some basic elements */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: black;
+    color: gold;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: gold;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+/* About Us Section Styles */
+.about-us {
+    padding: 50px 200px;
+    text-align: center;
+    background-color: white;
+}
+
+.about-us h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.about-image img {
+    background-image: url('aboutUs.jpg');
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-text {
+    flex: 2;
+    min-width: 300px;
+    max-width: 700px;
+    padding: 20px;
+    text-align: justify;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+footer {
+    background-color: black;
+    color: gold;
+    text-align: center;
+    padding: 5px 0;
+    position:fixed;
+    width: 100%;
+    bottom: 0;
+}

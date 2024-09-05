@@ -1,0 +1,60 @@
+# Ignore compiled Python files
+*.pyc
+
+# Ignore the virtual environment folder
+/IEMS_virtual_environment/
+
+# Ignore database files
+*.sqlite3
+*.db
+/car_coffee_company/mysql/
+
+# Ignore local settings file
+/myproject/settings_local.py
+
+# Ignore media and static files (if not using a CDN)
+/media/
+/static/
+
+# Ignore IDE and editor-specific files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.komodoproject
+*.tmproj
+
+# Ignore logs and cache files
+/logs/
+__pycache__/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore environment variables file (e.g., .env)
+.env
+
+# Ignore compiled files
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore common development directories
+node_modules/
+bower_components/
+
+# Ignore compiled Sass or CSS
+*.css.map
+
+# Ignore compiled JavaScript
+*.js.map
+
+# Ignore compiled TypeScript
+*.tsbuildinfo
+
+# Ignore compiled Webpack assets
+/dist/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/

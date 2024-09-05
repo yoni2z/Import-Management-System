@@ -1,0 +1,51 @@
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance - Simple Import Export</title>
+    <link rel="stylesheet" href="{% static 'core/financee.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Simple Import Management System</a></li>
+                <li><a href="{% url 'SIEMS_home' %}">Log out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about-us">
+        <h1>Import Car Details</h1> 
+        <div class="available-content">
+            <ul>
+                {% for order in import_orders %}
+                <li>
+                    <form method="POST" action="{% url 'confirm_order' %}">
+                    {% csrf_token %}
+                    <label for="track">Tracking No: </label>
+                    <input id= "track" name="track" value="{{ order.TrackingNo }}" readonly>
+                    <label for="model">Model: </label>
+                    <input id="model" name="model" value="{{ order.Model.Model }}" readonly>
+                    <p><strong>Specifications: </strong>{{ order.Model.Specifications }}</p>
+                    <p><strong>Year: </strong>{{ order.Model.Year }}</p>
+                    <p><strong>Price: </strong>{{ order.Model.Price }}</p>
+                    <p><strong>Supplier: </strong>{{ order.Model.supplier.supp_name}}</p>
+                    <p><strong>Count: </strong>{{ order.Count }}</p>
+                    <button type="submit">Confirm</button>
+                    </form>
+                </li>
+                {% empty %}
+                <li>No orders found.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Simple Import Export Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

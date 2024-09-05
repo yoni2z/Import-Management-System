@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - Car Import Management System</title>
+    <link rel="stylesheet" href="{% static 'core/orders.css' %}">
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const model = urlParams.get('name');
+            const make = urlParams.get('make');
+            const year = urlParams.get('year');
+            const price = urlParams.get('price');
+            const image = urlParams.get('image');
+
+            document.getElementById('car-image').src = "{% static 'core/images/' %}" + image;
+            document.getElementById('model').value = model;
+            document.getElementById('car-make').value = make;
+            document.getElementById('year').value = year;
+            document.getElementById('price').value = price;
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'SIEMS_home' %}">Home</a></li>
+                <li><a href="{% url 'SIEMS_about' %}">About Us</a></li>
+                <li><a href="{% url 'SIEMS_cars' %}">Cars</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="order-details">
+        <h1>Place Order</h1>
+        <div class="car-details">
+            <img id="car-image" src="" alt="Car Image">
+            <h2 id="car-model"></h2>
+            <p id="car-make"></p>
+            <p id="car-year"></p>
+            <p id="car-price"></p>
+        </div>
+        <form method="post" action="{% url 'submit_order' %}"> {% csrf_token %}
+            <label for="model">Model:</label>
+            <input type="text" id="model" name="model" readonly>
+            <label for="year">Year:</label>
+            <input type="number" id="year" name="year" readonly>
+            <label for="price">Price in ETB:</label>
+            <input type="number" id="price" name="price" readonly>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+            <label for="color">Color:</label>
+            <select id="color" name="color" required>
+                <option value=""></option>
+                <option value="Black">Black</option>
+                <option value="Brown">Brown</option>
+                <option value="Blue">Blue</option>
+                <option value="Gray">Gray</option>
+            </select>
+            <label for="delivery-date">Preferred Delivery Date:</label>
+            <input type="date" id="delivery-date" name="delivery_date">
+            <button type="submit">Place Order</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Simple Import Export Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

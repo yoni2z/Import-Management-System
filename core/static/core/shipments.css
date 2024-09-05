@@ -1,0 +1,81 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* heading styling */
+header {
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    color: gold;
+    top: 0;
+    left: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: gold;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.shipment-details, .all-shipments {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 20px;
+    background-color: black;
+    color: gold;
+    border: 1px solid gold;
+    border-radius: 10px;
+}
+
+.shipment-details h1, .all-shipments h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.shipment-info, .shipment-list {
+    margin: 10px 0;
+    color: gold;
+}
+
+.shipment-info p, .shipment-list p {
+    margin: 10px 0;
+    color: gold;
+}
+
+.shipment-info p span, .shipment-list p span {
+    font-weight: bold;
+    color: gold;
+}
+
+footer {
+    background-color: black;
+    color: gold;
+    text-align: center;
+    padding: 1px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

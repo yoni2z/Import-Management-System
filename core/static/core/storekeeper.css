@@ -1,0 +1,163 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* heading styling */
+header {
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    color: gold;
+    top: 0;
+    left: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: gold;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+section.storekeeper-dashboard {
+    padding: 20px;
+    margin-top: 60px; 
+    background-color: black;
+    max-width: 1200px;
+    margin: 60px auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.storekeeper-dashboard h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: gold;
+}
+
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.dashboard-item {
+    background-color: white;
+    color: black;
+    border: 1px solid gold;
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.dashboard-item h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: black;
+}
+
+#add-car-form label,
+#add-car-form input,
+#add-car-form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+#add-car-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#add-car-form input, p {
+    padding: 10px;
+    border: 1px solid gold;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+#add-car-form button {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: 1px solid gold;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#add-car-form button:hover {
+    background-color: gold;
+    color: black;
+}
+
+#order-list,
+#inventory-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#order-list li,
+#inventory-list li {
+    padding: 10px;
+    border-bottom: 1px solid gold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.confirm-order-button {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    border: 1px solid gold;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.confirm-order-button:hover {
+    background-color: gold;
+    color: black;
+}
+
+/* Footer Styles */
+footer {
+    background-color: black;
+    color: gold;
+    text-align: center;
+    padding: 1px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

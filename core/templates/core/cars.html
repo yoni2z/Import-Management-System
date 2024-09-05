@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Cars - Car Import Management System</title>
+    <link rel="stylesheet" href="{% static 'core/cars.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'SIEMS_home' %}">Home</a></li>
+                <li><a href="{% url 'SIEMS_about' %}">About Us</a></li>
+                <li><a href="{% url 'SIEMS_cars' %}">Cars</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li><a href="{% url 'admin:login' %}">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="available-cars">
+        <h1>Available Cars</h1>
+        <div class="car-list">
+            
+            <div class="car-item">
+                <img src="{% static 'core/images/toyota1.jpg' %}" alt="Car 1">
+                <h2>bz4x</h2>
+                <p>Make: Toyota</p>
+                <p>Year: 2022</p>
+                <p>Price: ETB 2,700,000</p>
+                <a href="{% url 'SIEMS_orders' %}?name=bz4x&make=Toyota&year=2022&price=2700000&image=toyota1.jpg" class="order-button">Order Now</a>
+            </div>
+
+            <div class="car-item">
+                <img src="{% static 'core/images/honda1.jpg' %}" alt="Car 2">
+                <h2>Honda E</h2>
+                <p>Make: Honda</p>
+                <p>Year: 2023</p>
+                <p>Price: ETB 1,800,000</p>
+                <a href="{% url 'SIEMS_orders' %}?name=honda-e&make=Honda&year=2023&price=1800000&image=honda1.jpg" class="order-button">Order Now</a>
+            </div>
+
+            <div class="car-item">
+                <img src="{% static 'core/images/id6.jpg' %}" alt="Car 3">
+                <h2>id 6</h2>
+                <p>Make: Volkswagen</p>
+                <p>Year: 2023</p>
+                <p>Price: ETB 6,000,000</p>
+                <a href="{% url 'SIEMS_orders' %}?name=id6&make=Volkswagen&year=2023&price=6000000&image=id6.jpg" class="order-button">Order Now</a>
+            </div>
+
+            <div class="car-item">
+                <img src="{% static 'core/images/hyundai1.jpg' %}" alt="Car 4">
+                <h2>Tucson</h2>
+                <p>Make: Hyundai</p>
+                <p>Year: 2022</p>
+                <p>Price: ETB 4,500,000</p>
+                <a href="{% url 'SIEMS_orders' %}?name=tucson&make=Hyundai&year=2022&price=4500000&image=hyundai1.jpg" class="order-button">Order Now</a>
+            </div>
+
+            <div class="car-item">
+                <img src="{% static 'core/images/hyundai2.jpg' %}" alt="Car 4">
+                <h2>Tucson Hybrid</h2>
+                <p>Make: Hyundai</p>
+                <p>Year: 2022</p>
+                <p>Price: ETB 5,700,000</p>
+                <a href="{% url 'SIEMS_orders' %}?name=tucson-hybrid&make=Hyundai&year=2022&price=5700000&image=hyundai2.jpg" class="order-button">Order Now</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Simple Import Export Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

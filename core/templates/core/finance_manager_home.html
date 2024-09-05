@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance - Simple Import Export</title>
+    <link rel="stylesheet" href="{% static 'core/finance.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Simple Import Management System</a></li>
+                <li><a href="{% url 'SIEMS_home' %}">Log out</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+
+    <section class="about-us">
+        <h1>Finance Details</h1>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="{% static 'core/images/finance1.jpg' %}" alt="About Us">
+            </div>
+            <div class="about-button">
+                <a href="{% url 'finance_available' %}">Available Cars</button>
+                <a href="{% url 'finance_sell' %}">Sell Cars</button>
+                <a href="{% url 'finance_import' %}">Import cars</button>
+            </div>
+             
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Simple Import Export Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

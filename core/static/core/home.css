@@ -1,0 +1,147 @@
+/* Reset some basic elements */
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* heading styling */
+header {
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    color: gold;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav {
+    background-color: black;
+    color: gold;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: gold;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('login.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.loginContainer {
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+    color: gold;
+    max-width: 450px;
+    width: 100%;
+}
+
+div.loginHeader {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+div.loginHeader h1 {
+    font-size: 50px;
+    font-style: italic;
+    color: gold;
+    margin: 0px;
+}
+
+div.loginHeader h2 {
+    font-size: 30px;
+    font-style: italic;
+    text-transform: uppercase;
+    color: gold;
+    margin: 0px;
+}
+
+form {
+    margin: 0 auto;
+    text-align: center;
+}
+
+div.formGroup a {
+    display: block;
+    text-transform: lowercase;
+    text-align: right;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: gold;
+    margin-top: 1px;
+}
+
+div.formGroup a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+div.formGroup label {
+    display: block;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    color: gold;
+    margin-bottom: 10px;
+}
+
+div.formGroup input {
+    height: 30px;
+    width: 100%;
+    border: 2px solid gold;
+    font-style: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    background: black;
+    color: gold;
+    margin-bottom: 20px;
+}
+
+button {
+    font-size: 20px;
+    padding: 10px;
+    background: black;
+    border: 2px solid gold;
+    color: gold;
+}
+
+button:hover {
+    font-size: 20px;
+    padding: 10px;
+    background: gold;
+    border: 2px solid black;
+    color: black;
+}
